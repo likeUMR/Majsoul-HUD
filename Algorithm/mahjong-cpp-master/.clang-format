@@ -1,0 +1,24 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+Language: Cpp
+Standard: c++20
+ColumnLimit: 88
+UseCRLF: false
+# Additional options
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+AllowAllConstructorInitializersOnNextLine: true
+BreakConstructorInitializers: BeforeComma
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: true
+  AfterClass: true
+  AfterEnum: true
+  AfterNamespace: true
+  AfterStruct: true
+  BeforeCatch: true
+  BeforeElse: true
+SortIncludes: true
+ReflowComments: false
+AllowShortFunctionsOnASingleLine: false

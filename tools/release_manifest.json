@@ -1,0 +1,121 @@
+{
+  "release_name_prefix": "AI_Mahjong_Release",
+  "output_root": "dist",
+  "zip_release": true,
+  "global_exclude_names": [
+    "__pycache__",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    "CMakeFiles"
+  ],
+  "global_exclude_file_globs": [
+    "*.log",
+    "*.pid",
+    "*.lock",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "copy_entries": [
+    {
+      "kind": "file",
+      "source": "start_all.bat",
+      "target": "start_all.bat"
+    },
+    {
+      "kind": "file",
+      "source": "tools/launchers/algorithm_backend_launcher.py",
+      "target": "tools/launchers/algorithm_backend_launcher.py"
+    },
+    {
+      "kind": "file",
+      "source": "RELEASE_GUIDE.md",
+      "target": "docs/RELEASE_GUIDE.md"
+    },
+    {
+      "kind": "dir",
+      "source": "config",
+      "target": "config"
+    },
+    {
+      "kind": "python_runtime",
+      "target": "runtime/python"
+    },
+    {
+      "kind": "dir",
+      "source": "Crawler",
+      "target": "Crawler",
+      "exclude_names": [
+        ".venv"
+      ],
+      "exclude_relative_globs": [
+        "crawler_debug.log",
+        "hud_debug.log"
+      ]
+    },
+    {
+      "kind": "dir",
+      "source": "Crawler/.venv/Lib/site-packages",
+      "target": "runtime/site-packages",
+      "exclude_relative_globs": [
+        "pip/**",
+        "pip-*.dist-info/**",
+        "wheel/**",
+        "wheel-*.dist-info/**"
+      ]
+    },
+    {
+      "kind": "file",
+      "source": "Algorithm/mahjong-cpp-master/run_server_ucrt.bat",
+      "target": "Algorithm/mahjong-cpp-master/run_server_ucrt.bat"
+    },
+    {
+      "kind": "file",
+      "source": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server/nanikiru.exe",
+      "target": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server/nanikiru.exe"
+    },
+    {
+      "kind": "file",
+      "source": "C:/msys64/ucrt64/bin/libspdlog-1.17.dll",
+      "target": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server/libspdlog-1.17.dll"
+    },
+    {
+      "kind": "file",
+      "source": "C:/msys64/ucrt64/bin/libgcc_s_seh-1.dll",
+      "target": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server/libgcc_s_seh-1.dll"
+    },
+    {
+      "kind": "file",
+      "source": "C:/msys64/ucrt64/bin/libwinpthread-1.dll",
+      "target": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server/libwinpthread-1.dll"
+    },
+    {
+      "kind": "file",
+      "source": "C:/msys64/ucrt64/bin/libstdc++-6.dll",
+      "target": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server/libstdc++-6.dll"
+    },
+    {
+      "kind": "dir",
+      "source": "Algorithm/mahjong-cpp-master/data/config",
+      "target": "Algorithm/mahjong-cpp-master/build-ucrt-app/src/server"
+    }
+  ],
+  "template_entries": [
+    {
+      "source": "tools/release_templates/launch_browser.bat",
+      "target": "launch_browser.bat"
+    },
+    {
+      "source": "tools/release_templates/install_cert.bat",
+      "target": "install_cert.bat"
+    },
+    {
+      "source": "tools/release_templates/uninstall_cert.bat",
+      "target": "uninstall_cert.bat"
+    },
+    {
+      "source": "tools/release_templates/README_FIRST.txt",
+      "target": "README_FIRST.txt"
+    }
+  ]
+}

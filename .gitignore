@@ -1,0 +1,52 @@
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*/.venv/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local runtime state and logs
+.runtime/
+cert/
+CERT_INSTALL_GUIDE.txt
+*.log
+*.pid
+*.lock
+
+# Release and temporary outputs
+dist/
+runtime/
+tmp/
+tmp.txt
+*.zip
+
+# Accidental portable Python dumps in project root
+/python.exe
+/pythonw.exe
+/python311.dll
+/python3.dll
+/vcruntime140.dll
+/vcruntime140_1.dll
+/LICENSE.txt
+
+# CMake and compiled artifacts
+Algorithm/mahjong-cpp-master/build-*/
+Algorithm/mahjong-cpp-master/**/CMakeFiles/
+Algorithm/mahjong-cpp-master/**/CMakeCache.txt
+Algorithm/mahjong-cpp-master/**/.ninja_*
+Algorithm/mahjong-cpp-master/**/cmake_install.cmake
+Algorithm/mahjong-cpp-master/**/install_manifest.txt
+Algorithm/mahjong-cpp-master/**/install_local_manifest.txt
+
+# YOLO experiment outputs
+yolo/

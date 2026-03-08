@@ -1,0 +1,4 @@
+mitmproxy
+protobuf
+pillow
+requests
